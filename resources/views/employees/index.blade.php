@@ -40,8 +40,11 @@
 					</table>
 				</div>
 				<div class="panel-footer">
-					<div class="pull-left">
+					<div class="pull-left" id="btn-create">
 						<a href="/employees/create" class="btn btn-success btn-sm">Create</a>
+					</div>
+					<div class="pull-right" id="page_link">
+						{{ $employees->links() }}
 					</div>
 				</div>
 			</div>

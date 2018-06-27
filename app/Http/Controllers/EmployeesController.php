@@ -10,7 +10,7 @@ class EmployeesController extends Controller
     
     public function index()
     {
-        $employees=Employee::paginate(10);
+        $employees=Employee::paginate(3);
         //return $employees;
         return view('employees.index',compact('employees'));
     }
@@ -24,6 +24,8 @@ class EmployeesController extends Controller
     
     public function store(Request $request)
     {
+          //$this->validateData($request);
+
          Employee::create($request->all());
          return redirect()->action('EmployeesController@index');
     }
