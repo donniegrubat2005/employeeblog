@@ -16,7 +16,7 @@
 					</div>
 					<div class="form-group">
 						<label for="LastName">Last Name</label>
-						<input type="text" class="form-control" name="lastname" placeholder="Last Name" value=" {{$employee->LastName}}"/>
+						<input type="text" class="form-control" name="lastname" placeholder="Last Name" value=" {{$employee->lastname}}"/>
 					</div>
 					<div class="form-group">
 						<label for="Address">Address</label>

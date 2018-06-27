@@ -25,7 +25,7 @@ class EmployeesController extends Controller
     public function store(Request $request)
     {
          Employee::create($request->all());
-         return view('employees.create');
+         return redirect()->action('EmployeesController@index');
     }
 
    
@@ -49,6 +49,8 @@ class EmployeesController extends Controller
     {
         $employee=Employee::findOrFail($id);
         $employee->update($request->all());
+
+        return redirect()->action('EmployeesController@index');
     }
 
     
