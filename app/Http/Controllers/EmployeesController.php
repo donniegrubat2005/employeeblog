@@ -56,6 +56,12 @@ class EmployeesController extends Controller
     
     public function destroy($id)
     {
-        //
+        //$employee=Employee::findOrFail($id)
+        //$employee->delete();
+        Employee::destroy($id);
+
+        return redirect('/employees');
+
+
     }
 }
