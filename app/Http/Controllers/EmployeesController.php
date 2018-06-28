@@ -24,7 +24,12 @@ class EmployeesController extends Controller
     
     public function store(Request $request)
     {
-          //$this->validateData($request);
+           $request->validate([
+
+            'firstname' => 'required|string|max:20',
+            'lastname'  => 'required|string|max:20',
+            'address'   => 'required|string|max:60',
+        ]);
 
          Employee::create($request->all());
          return redirect()->action('EmployeesController@index');
@@ -49,6 +54,13 @@ class EmployeesController extends Controller
     
     public function update(Request $request, $id)
     {
+          $request->validate([
+
+            'firstname' => 'required|string|max:20',
+            'lastname'  => 'required|string|max:20',
+            'address'   => 'required|string|max:60',
+        ]);
+          
         $employee=Employee::findOrFail($id);
         $employee->update($request->all());
 
