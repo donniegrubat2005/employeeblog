@@ -12,6 +12,5 @@ class EmployeesTableSeeder extends Seeder
     public function run()
     {
        
-    });
     }
 }
