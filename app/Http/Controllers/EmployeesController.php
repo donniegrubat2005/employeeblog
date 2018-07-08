@@ -12,7 +12,8 @@ class EmployeesController extends Controller
     {
         $employees=Employee::paginate(3);
         //return $employees;
-        return view('employees.index',compact('employees'));
+       return view('employees.index',compact('employees'));
+      
     }
 
     
